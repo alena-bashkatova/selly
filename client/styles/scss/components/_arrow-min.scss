@@ -1,0 +1,55 @@
+.arrow-min {
+  margin-top: 20px;
+  width: 29px;
+  height: 29px;
+
+  a {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #16a085;
+    @include border-radius(50%);
+
+    &::after {
+      position: absolute;
+      top: 12px;
+      left: 7px;
+      display: block;
+      width: 7px;
+      height: 2px;
+      background-color: #16a085;
+      content: '';
+      @include border-radius(1px);
+      @include rotate(45deg);
+    }
+    &::before {
+      position: absolute;
+      top: 12px;
+      left: 11px;
+      display: block;
+      width: 7px;
+      height: 2px;
+      background-color: #16a085;
+      content: '';
+      @include border-radius(1px);
+      @include rotate(-45deg);
+    }
+    &:hover {
+      border: 2px solid #19cfab;
+      @include transition-property(color);
+      @include transition-duration(250ms);
+      &::after {
+        background-color: #19cfab;
+        @include transition-property(color);
+        @include transition-duration(250ms);
+      }
+      &::before {
+        background-color: #19cfab;
+        @include transition-property(color);
+        @include transition-duration(250ms);
+      }
+    }
+  }
+}
+

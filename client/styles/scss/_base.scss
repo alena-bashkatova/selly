@@ -1,0 +1,78 @@
+body {
+  position: relative;
+  // refactor this code, it's just example
+  &.landing {
+    overflow-x: hidden;
+    main {
+
+      .selly {
+        width: 100%;
+      }
+
+      .content-wrapper {
+        text-align: center;
+
+        .content {
+          display: inline-block;
+          font-size: 0;
+          @include clearfix;
+
+          .conteiner {
+            width: 995px;
+            margin: 0 auto;
+
+            h2 {
+              font: lighter 36px "Open Sans";
+              line-height: 42px;
+              text-transform: uppercase;
+              color: #363636;
+            }
+
+            h3 {
+              font: lighter 24px "Open Sans";
+              line-height: 45px;
+              text-align: center;
+              text-transform: uppercase;
+              color: #5e5e5e;
+            }
+
+            h6 {
+              font: italic 14px "Georgia";
+              line-height: 26px;
+              color: #8a8a8a;
+            }
+
+            p {
+              font: lighter 16px "Open Sans";
+              line-height: 27px;
+              color: #777777;
+            }
+
+            .italic {
+              font: italic 14px "Georgia";
+              line-height: 22px;
+              text-align: center;
+              color: #8a8a8a;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .push {
+    float: right;
+    vertical-align: top;
+    width: 0;
+    height: 100%;
+    min-height: 1px;
+    background-color: red;
+    @include transition-property(width);
+    @include transition-duration(400ms);
+
+    &.show {
+      width: 190px;
+    }
+  }
+}
+

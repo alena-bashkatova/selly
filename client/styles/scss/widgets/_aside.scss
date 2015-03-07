@@ -1,0 +1,89 @@
+aside {
+  position: fixed;
+  top: 0;
+  right: -190px;
+  width: 190px;
+  height: 100%;
+  padding-top: 123px;
+  background-color: #e4e8ea;
+  @include transition-property(right);
+  @include transition-duration(400ms);
+
+  &.show {
+    right: 0;
+  }
+
+  nav {
+
+    .logo-menu {
+      display: block;
+      width: 89px;
+      margin: 0 auto;
+    }
+
+    ul {
+      margin-top: 15px;
+      font-size: 0;
+
+      li {
+        position: relative;
+        padding-top: 45px;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:nth-last-child(-n+4) {
+
+          &::before {
+            position: absolute;
+            top: 22px;
+            left: 80px;
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: #a4a6a8;
+            content: '';
+          }
+        }
+
+        a {
+          font: normal 12px "Open Sans", sans-serif;
+          text-decoration: none;
+          letter-spacing: 2px;
+          color: #757575;
+
+          &:hover {
+            color: #383838;
+          }
+        }
+      }
+    }
+    .mail {
+      width: 56px;
+      height: 56px;
+      margin: 80px 67px;
+
+      a {
+        position: relative;
+        display: inline-block;
+        width: 56px;
+        height: 56px;
+        background-color: #3a3a3a;
+        @include border-radius(50%);
+
+        &::after {
+          position: absolute;
+          top: 20px;
+          left: 15px;
+          display: block;
+          width: 26px;
+          height: 17px;
+          background: url(../../images/aside/mail-icon.png);
+          content:'';
+        }
+        &:hover {
+          background-color: #16a085;
+        }
+      }
+    }
+  }
+}

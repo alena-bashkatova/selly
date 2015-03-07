@@ -1,0 +1,38 @@
+footer {
+  width: 100%;
+  border-top: 1px solid #e1e1e1;
+
+  .conteiner {
+    @include clearfix;
+
+    ul {
+      float: left;
+      width: 525px;
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 25px;
+
+        a{
+          font: lighter 14px "Open Sans";
+          line-height: 100px;
+          text-decoration: none;
+          color: #8a8a8a;
+
+          &:hover {
+            color: black;
+            @include transition-property(color);
+            @include transition-duration(250ms);
+          }
+        }
+      }
+    }
+
+    .copyright {
+      float: right;
+      font: lighter 14px "Open Sans";
+      line-height: 100px;
+    }
+  }
+}

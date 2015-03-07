@@ -1,0 +1,110 @@
+.selly {
+  padding: 120px 0 92px;
+  border-bottom: 5px solid #16a085;
+  background: url(../../images/background/background.png);
+  background-size: cover;
+
+  .logo {
+    display: block;
+    width: 256px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-top: 40px;
+    font: lighter 48px 'Open Sans';
+    line-height: 57px;
+    text-align: center;
+    color: white;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  p {
+    margin-top: 27px;
+    font: lighter 18px 'Open Sans';
+    text-align: center;
+    color: white;
+  }
+
+  .buttons {
+    width: 478px;
+    margin: 105px auto 0;
+    font-size: 0;
+
+    .button {
+      display: inline-block;
+    }
+
+    .button-black {
+      display: inline-block;
+      width: 218px;
+      height: 66px;
+      margin-left: 30px;
+      border: 3px solid white;
+      background-color: rgba(#22303d, 0.7);
+      font: normal 16px 'Open Sans';
+      line-height: 66px;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      @include border-radius(3px);
+
+      &:hover {
+          background-color: rgba(#141d25, 0.7);
+      }
+    }
+  }
+
+  .arrow {
+    margin: 114px auto 0;
+    width: 44px;
+    height: 44px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 2px solid white;
+      text-align: center;
+      @include border-radius(50%);
+
+      &::after {
+        position: absolute;
+        top: 20px;
+        left: 12px;
+        display: block;
+        width: 10px;
+        height: 3px;
+        background-color: white;
+        content: '';
+        @include border-radius(2px);
+        @include rotate (45deg);
+      }
+      &::before {
+        position: absolute;
+        top: 20px;
+        left: 18px;
+        display: block;
+        width: 10px;
+        height: 3px;
+        background-color: white;
+        content: '';
+        @include border-radius(2px);
+        @include rotate(-45deg);
+      }
+      &:hover {
+        border: 2px solid #16a085;
+        &::after {
+          background-color: #16a085;
+        }
+        &::before {
+          background-color: #16a085;
+        }
+      }
+    }
+  }
+}

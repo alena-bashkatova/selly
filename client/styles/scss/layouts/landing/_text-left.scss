@@ -1,0 +1,65 @@
+.text-left {
+  padding-top: 142px;
+
+  .conteiner {
+
+    figure {
+      width: 830px;
+      height: 581px;
+      margin-left: 57px;
+      @include clearfix;
+
+      img {
+        float: right;
+      }
+
+      figcaption {
+        float: left;
+        width: 471px;
+        height: 230px;
+        margin-top: 167px;
+        font-size: 0;
+        text-align: left;
+
+        h2 {
+          display: inline-block;
+          width: 330px;
+        }
+
+        ul {
+          display: inline-block;
+          margin-left: 32px;
+          font-size: 0;
+
+          li {
+            display: inline-block;
+            margin-right: 18px;
+
+            a {
+              display: block;
+              width: 30px;
+              height: 36px;
+              background: url(../../images/icons-s4d18962700.png) no-repeat;
+            }
+
+            &:first-child {
+              a {
+                background-position: 0 -36px;
+              }
+            }
+            &:last-child {
+              margin-right: 0;
+              a {
+                background-position: 0 0;
+              }
+            }
+
+            p {
+              margin-top: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

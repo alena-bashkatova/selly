@@ -1,0 +1,40 @@
+.text-right {
+  width: 100%;
+  padding-top: 215px;
+  text-align: center;
+  @include clearfix;
+
+  .conteiner {
+
+    figure {
+      width: 845px;
+      height: 581px;
+      margin-left: 58px;
+      @include clearfix;
+
+      img {
+        float: left;
+      }
+
+      figcaption {
+        float: right;
+        width: 445px;
+        height: 230px;
+        margin-top: 167px;
+        font-size: 0;
+        text-align: left;
+
+
+        h2 {
+        }
+
+        p {
+          margin-top: 17px;
+          font: lighter 16px "Open Sans";
+          line-height: 27px;
+          color: #777777;
+        }
+      }
+    }
+  }
+}

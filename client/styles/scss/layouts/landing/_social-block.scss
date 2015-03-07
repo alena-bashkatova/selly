@@ -1,0 +1,70 @@
+.social-block {
+  width: 100%;
+  margin-top: 210px;
+
+  .conteiner {
+
+    h6 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .quote {
+      margin-top: 48px;
+      font-size: 0;
+
+      figure {
+        display: inline-block;
+        width: 419px;
+        height: 334px;
+        margin-left: 59px;
+        margin-bottom: 60px;
+        border: 1px solid #e1e1e1;
+
+        &:nth-child(2n+1) {
+          margin-left: 0;
+        }
+
+        img {
+          display: block;
+          margin: 48px auto 0;
+          @include border-radius(50%);
+        }
+
+        figcaption {
+          margin: 22px auto 0;
+          width: 348px;
+
+          h4 {
+            font: normal 18px "Open Sans";
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #5e5e5e;
+
+            a {
+              font: normal 14px "Georgia";
+              text-decoration: none;
+              text-transform: none;
+              color: #16a085;
+
+              &:hover {
+                color: #19cfab;
+                @include transition-property(color);
+                @include transition-duration(250ms);
+              }
+            }
+          }
+
+          .italic {
+            margin-top: 21px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

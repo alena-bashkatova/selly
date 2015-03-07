@@ -1,0 +1,29 @@
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/sprites";
+
+//sprites
+@import "icons/*.png";
+@include all-icons-sprites;
+
+//fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Georgia:300,400,700);
+
+//mixins
+@import "mixins/placeholder";
+
+//base
+@import "base";
+
+//components
+@import "components/button";
+@import "components/arrow-min";
+
+//widgets
+@import "widgets/aside";
+@import "widgets/footer";
+
+//layouts
+@import "layouts/home-page";

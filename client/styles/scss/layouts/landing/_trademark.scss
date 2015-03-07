@@ -1,0 +1,47 @@
+.trademark {
+  width: 100%;
+  padding-top: 205px;
+  padding-bottom: 214px;
+  font-size: 0;
+  text-align: center;
+  @include clearfix;
+
+  .conteiner {
+
+    h6 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .figure {
+      width: 860px;
+      margin: 48px auto 0;
+      font-size: 0;
+
+      figure {
+        display: inline-block;
+        width: 240px;
+        margin-left: 70px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        img {
+          padding: 12px 13px 13px 12px;
+          border: 1px solid #e1e1e1;
+        }
+
+        figcaption {
+          margin-top: 28px;
+        }
+      }
+    }
+    .arrow-min {
+      margin: 23px auto 0;
+    }
+  }
+}

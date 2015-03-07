@@ -1,0 +1,34 @@
+.button {
+  width: 224px;
+  height: 69px;
+  border-bottom: 3px solid #3bd4b6;
+  background-color: #16a085;
+  font: normal 16px 'Open Sans';
+  line-height: 69px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  @include border-radius(3px);
+
+  &:hover {
+    background-color: #19b596;
+  }
+
+}
+
+button {
+  float: right;
+  width: 204px;
+  height: 72px;
+  padding: 0;
+  border: none;
+  border-bottom: 3px solid #3bd4b6;
+  background-color: #16a085;
+  font: normal 16px 'Open Sans';
+  text-transform: uppercase;
+  color: white;
+
+  &:hover {
+      background-color: #19b596;
+  }
+}

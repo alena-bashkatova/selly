@@ -1,0 +1,53 @@
+.sign-up {
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 108px 0;
+  border-bottom: 5px solid #16a085;
+  font-size: 0;
+  text-align: center;
+  @include clearfix;
+
+  .conteiner {
+    width: 995px;
+    margin: 0 auto;
+
+    h2 {
+      span{
+        font: lighter 36px "Open Sans";
+        line-height: 42px;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      span {
+        font: lighter 18px "Open Sans";
+        line-height: 27px;
+        color: white;}
+    }
+
+    form {
+      margin: 63px auto 0;
+      width: 692px;
+      height: 71px;
+      font-size: 0;
+      @include clearfix;
+      @include border-radius(5px);
+
+      input {
+        float: left;
+        width: 448px;
+        height: 31px;
+        padding: 20px;
+        border: 0;
+        @include placeholder {
+          font: lighter 18px "Open Sans";
+          color: #8a8a8a;
+        }
+      }
+    }
+  }
+}
+
