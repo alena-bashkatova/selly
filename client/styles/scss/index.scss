@@ -13,6 +13,7 @@
 
 //mixins
 @import "mixins/placeholder";
+@import "mixins/user-select";
 
 //base
 @import "base";
@@ -20,10 +21,11 @@
 //components
 @import "components/button";
 @import "components/arrow-min";
+@import "components/input";
 
 //widgets
 @import "widgets/aside";
 @import "widgets/footer";
 
 //layouts
-@import "layouts/home-page";
+@import "layouts/landing";

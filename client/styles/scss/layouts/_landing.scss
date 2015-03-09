@@ -1,0 +1,24 @@
+.landing {
+  @import "landing/selly";
+  @import "landing/text-left";
+  @import "landing/text-right";
+  @import "landing/trademark";
+  @import "landing/sign-up";
+  @import "landing/social-block";
+  @import "landing/last-block";
+
+  .push {
+    float: right;
+    vertical-align: top;
+    width: 0;
+    height: 100%;
+    min-height: 1px;
+    background-color: red;
+    @include transition-property(width);
+    @include transition-duration(400ms);
+
+    &.show {
+      width: 190px;
+    }
+  }
+}

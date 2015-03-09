@@ -88,80 +88,59 @@ body {
 body.landing {
   overflow-x: hidden;
 }
-/* line 8, ../scss/_base.scss */
-body.landing main .selly {
-  width: 100%;
-}
-/* line 12, ../scss/_base.scss */
-body.landing main .content-wrapper {
-  text-align: center;
-}
-/* line 15, ../scss/_base.scss */
-body.landing main .content-wrapper .content {
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 20, ../scss/_base.scss */
-body.landing main .content-wrapper .content .conteiner {
-  width: 995px;
-  margin: 0 auto;
-}
-/* line 24, ../scss/_base.scss */
-body.landing main .content-wrapper .content .conteiner h2 {
+/* line 7, ../scss/_base.scss */
+body.landing h2 {
   font: lighter 36px "Open Sans";
   line-height: 42px;
   text-transform: uppercase;
   color: #363636;
 }
-/* line 31, ../scss/_base.scss */
-body.landing main .content-wrapper .content .conteiner h3 {
+/* line 14, ../scss/_base.scss */
+body.landing h3 {
   font: lighter 24px "Open Sans";
   line-height: 45px;
   text-align: center;
   text-transform: uppercase;
   color: #5e5e5e;
 }
-/* line 39, ../scss/_base.scss */
-body.landing main .content-wrapper .content .conteiner h6 {
+/* line 22, ../scss/_base.scss */
+body.landing h6 {
   font: italic 14px "Georgia";
   line-height: 26px;
   color: #8a8a8a;
 }
-/* line 45, ../scss/_base.scss */
-body.landing main .content-wrapper .content .conteiner p {
+/* line 28, ../scss/_base.scss */
+body.landing p {
   font: lighter 16px "Open Sans";
   line-height: 27px;
   color: #777777;
 }
-/* line 51, ../scss/_base.scss */
-body.landing main .content-wrapper .content .conteiner .italic {
+/* line 34, ../scss/_base.scss */
+body.landing .italic {
   font: italic 14px "Georgia";
   line-height: 22px;
   text-align: center;
   color: #8a8a8a;
 }
-/* line 63, ../scss/_base.scss */
-body .push {
-  float: right;
-  vertical-align: top;
-  width: 0;
-  height: 100%;
-  min-height: 1px;
-  background-color: red;
-  -webkit-transition-property: width;
-  -moz-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
-  -webkit-transition-duration: 400ms;
-  -moz-transition-duration: 400ms;
-  -o-transition-duration: 400ms;
-  transition-duration: 400ms;
+/* line 43, ../scss/_base.scss */
+body.landing main .selly {
+  width: 100%;
 }
-/* line 73, ../scss/_base.scss */
-body .push.show {
-  width: 190px;
+/* line 47, ../scss/_base.scss */
+body.landing main .content-wrapper {
+  text-align: center;
+}
+/* line 50, ../scss/_base.scss */
+body.landing main .content-wrapper .content {
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 55, ../scss/_base.scss */
+body.landing main .content-wrapper .content .container {
+  width: 995px;
+  margin: 0 auto;
 }
 
 /* line 1, ../scss/components/_button.scss */
@@ -180,13 +159,21 @@ body .push.show {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  -o-transition-duration: 400ms;
+  transition-duration: 400ms;
 }
-/* line 13, ../scss/components/_button.scss */
+/* line 15, ../scss/components/_button.scss */
 .button:hover {
   background-color: #19b596;
 }
 
-/* line 19, ../scss/components/_button.scss */
+/* line 21, ../scss/components/_button.scss */
 button {
   float: right;
   width: 204px;
@@ -198,8 +185,17 @@ button {
   font: normal 16px 'Open Sans';
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  -o-transition-duration: 400ms;
+  transition-duration: 400ms;
 }
-/* line 31, ../scss/components/_button.scss */
+/* line 36, ../scss/components/_button.scss */
 button:hover {
   background-color: #19b596;
 }
@@ -302,6 +298,60 @@ button:hover {
   transition-duration: 250ms;
 }
 
+/* line 1, ../scss/components/_input.scss */
+input {
+  display: inline-block;
+  width: 488px;
+  height: 71px;
+  padding-left: 68px;
+  border: none;
+  background: url(../../../client/images/input/mail.png) no-repeat;
+  background-position: 25px center;
+  font: lighter 18px 'Open Sans', sans-serif;
+  vertical-align: bottom;
+  color: #777777;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 15, ../scss/components/_input.scss */
+input:focus {
+  background-color: #eac7d1;
+  font: lighter 18px Georgia;
+  color: #51272d;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1000ms;
+  -moz-transition-duration: 1000ms;
+  -o-transition-duration: 1000ms;
+  transition-duration: 1000ms;
+}
+/* line 2, ../scss/mixins/_placeholder.scss */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* line 3, ../scss/mixins/_placeholder.scss */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+/* line 4, ../scss/mixins/_placeholder.scss */
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* line 5, ../scss/mixins/_placeholder.scss */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
 /* line 1, ../scss/widgets/_aside.scss */
 aside {
   position: fixed;
@@ -401,34 +451,35 @@ aside nav .mail a:hover {
 
 /* line 1, ../scss/widgets/_footer.scss */
 footer {
+  display: inline-block;
   width: 100%;
   border-top: 1px solid #e1e1e1;
 }
-/* line 5, ../scss/widgets/_footer.scss */
-footer .conteiner {
-  overflow: hidden;
-  *zoom: 1;
+/* line 6, ../scss/widgets/_footer.scss */
+footer .container {
+  width: 902px;
+  margin-left: 50px;
 }
-/* line 8, ../scss/widgets/_footer.scss */
-footer .conteiner ul {
-  float: left;
+/* line 10, ../scss/widgets/_footer.scss */
+footer .container ul {
+  display: inline-block;
   width: 525px;
   font-size: 0;
 }
-/* line 13, ../scss/widgets/_footer.scss */
-footer .conteiner ul li {
+/* line 15, ../scss/widgets/_footer.scss */
+footer .container ul li {
   display: inline-block;
   margin-right: 25px;
 }
-/* line 17, ../scss/widgets/_footer.scss */
-footer .conteiner ul li a {
+/* line 19, ../scss/widgets/_footer.scss */
+footer .container ul li a {
   font: lighter 14px "Open Sans";
   line-height: 100px;
   text-decoration: none;
   color: #8a8a8a;
 }
-/* line 23, ../scss/widgets/_footer.scss */
-footer .conteiner ul li a:hover {
+/* line 25, ../scss/widgets/_footer.scss */
+footer .container ul li a:hover {
   color: black;
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -439,58 +490,74 @@ footer .conteiner ul li a:hover {
   -o-transition-duration: 250ms;
   transition-duration: 250ms;
 }
-/* line 32, ../scss/widgets/_footer.scss */
-footer .conteiner .copyright {
-  float: right;
+/* line 34, ../scss/widgets/_footer.scss */
+footer .container .copyright {
+  display: inline-block;
+  margin-left: 250px;
   font: lighter 14px "Open Sans";
   line-height: 100px;
+  color: #8a8a8a;
 }
 
 /* line 1, ../scss/layouts/landing/_selly.scss */
-.selly {
+.landing .selly {
+  position: relative;
+  width: 100%;
   padding: 120px 0 92px;
   border-bottom: 5px solid #16a085;
-  background: url(../../images/background/background.png);
+  background: url(../../images/background&border/background.png);
   background-size: cover;
 }
-/* line 7, ../scss/layouts/landing/_selly.scss */
-.selly .logo {
+/* line 8, ../scss/layouts/landing/_selly.scss */
+.landing .selly::after {
+  position: absolute;
+  top: 100%;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-image: url(../../../client/images/background&border/border.png);
+  content: '';
+}
+/* line 18, ../scss/layouts/landing/_selly.scss */
+.landing .selly .logo {
   display: block;
   width: 256px;
   margin: 0 auto;
 }
-/* line 13, ../scss/layouts/landing/_selly.scss */
-.selly h1 {
+/* line 24, ../scss/layouts/landing/_selly.scss */
+.landing .selly h1 {
   margin-top: 40px;
   font: lighter 48px 'Open Sans';
   line-height: 57px;
   text-align: center;
   color: white;
 }
-/* line 20, ../scss/layouts/landing/_selly.scss */
-.selly h1 span {
+/* line 31, ../scss/layouts/landing/_selly.scss */
+.landing .selly h1 span {
   font-weight: bold;
 }
-/* line 25, ../scss/layouts/landing/_selly.scss */
-.selly p {
+/* line 36, ../scss/layouts/landing/_selly.scss */
+.landing .selly p {
   margin-top: 27px;
   font: lighter 18px 'Open Sans';
   text-align: center;
   color: white;
 }
-/* line 32, ../scss/layouts/landing/_selly.scss */
-.selly .buttons {
+/* line 43, ../scss/layouts/landing/_selly.scss */
+.landing .selly .buttons {
   width: 478px;
   margin: 105px auto 0;
   font-size: 0;
 }
-/* line 37, ../scss/layouts/landing/_selly.scss */
-.selly .buttons .button {
+/* line 48, ../scss/layouts/landing/_selly.scss */
+.landing .selly .buttons .button {
   display: inline-block;
+  vertical-align: top;
 }
-/* line 41, ../scss/layouts/landing/_selly.scss */
-.selly .buttons .button-black {
+/* line 53, ../scss/layouts/landing/_selly.scss */
+.landing .selly .buttons .button-black {
   display: inline-block;
+  vertical-align: top;
   width: 218px;
   height: 66px;
   margin-left: 30px;
@@ -507,18 +574,18 @@ footer .conteiner .copyright {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 55, ../scss/layouts/landing/_selly.scss */
-.selly .buttons .button-black:hover {
+/* line 68, ../scss/layouts/landing/_selly.scss */
+.landing .selly .buttons .button-black:hover {
   background-color: rgba(20, 29, 37, 0.7);
 }
-/* line 61, ../scss/layouts/landing/_selly.scss */
-.selly .arrow {
+/* line 74, ../scss/layouts/landing/_selly.scss */
+.landing .selly .arrow {
   margin: 114px auto 0;
   width: 44px;
   height: 44px;
 }
-/* line 66, ../scss/layouts/landing/_selly.scss */
-.selly .arrow a {
+/* line 79, ../scss/layouts/landing/_selly.scss */
+.landing .selly .arrow a {
   position: relative;
   display: inline-block;
   width: 40px;
@@ -531,8 +598,8 @@ footer .conteiner .copyright {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 75, ../scss/layouts/landing/_selly.scss */
-.selly .arrow a::after {
+/* line 88, ../scss/layouts/landing/_selly.scss */
+.landing .selly .arrow a::after {
   position: absolute;
   top: 20px;
   left: 12px;
@@ -552,8 +619,8 @@ footer .conteiner .copyright {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 87, ../scss/layouts/landing/_selly.scss */
-.selly .arrow a::before {
+/* line 100, ../scss/layouts/landing/_selly.scss */
+.landing .selly .arrow a::before {
   position: absolute;
   top: 20px;
   left: 18px;
@@ -573,37 +640,36 @@ footer .conteiner .copyright {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 99, ../scss/layouts/landing/_selly.scss */
-.selly .arrow a:hover {
+/* line 112, ../scss/layouts/landing/_selly.scss */
+.landing .selly .arrow a:hover {
   border: 2px solid #16a085;
 }
-/* line 101, ../scss/layouts/landing/_selly.scss */
-.selly .arrow a:hover::after {
+/* line 114, ../scss/layouts/landing/_selly.scss */
+.landing .selly .arrow a:hover::after {
   background-color: #16a085;
 }
-/* line 104, ../scss/layouts/landing/_selly.scss */
-.selly .arrow a:hover::before {
+/* line 117, ../scss/layouts/landing/_selly.scss */
+.landing .selly .arrow a:hover::before {
   background-color: #16a085;
 }
-
 /* line 1, ../scss/layouts/landing/_text-left.scss */
-.text-left {
+.landing .text-left {
   padding-top: 142px;
 }
-/* line 6, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure {
+/* line 4, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure {
   width: 830px;
   height: 581px;
   margin-left: 57px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 12, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure img {
+/* line 10, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure img {
   float: right;
 }
-/* line 16, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption {
+/* line 14, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption {
   float: left;
   width: 471px;
   height: 230px;
@@ -611,68 +677,67 @@ footer .conteiner .copyright {
   font-size: 0;
   text-align: left;
 }
-/* line 24, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption h2 {
+/* line 22, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption h2 {
   display: inline-block;
   width: 330px;
 }
-/* line 29, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption ul {
+/* line 27, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption ul {
   display: inline-block;
   margin-left: 32px;
   font-size: 0;
 }
-/* line 34, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption ul li {
+/* line 32, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption ul li {
   display: inline-block;
   margin-right: 18px;
 }
-/* line 38, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption ul li a {
+/* line 36, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption ul li a {
   display: block;
   width: 30px;
   height: 36px;
   background: url(../../images/icons-s4d18962700.png) no-repeat;
 }
-/* line 46, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption ul li:first-child a {
+/* line 44, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption ul li:first-child a {
   background-position: 0 -36px;
 }
-/* line 50, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption ul li:last-child {
+/* line 48, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption ul li:last-child {
   margin-right: 0;
 }
-/* line 52, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption ul li:last-child a {
+/* line 50, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption ul li:last-child a {
   background-position: 0 0;
 }
-/* line 57, ../scss/layouts/landing/_text-left.scss */
-.text-left .conteiner figure figcaption ul li p {
+/* line 55, ../scss/layouts/landing/_text-left.scss */
+.landing .text-left figure figcaption ul li p {
   margin-top: 17px;
 }
-
 /* line 1, ../scss/layouts/landing/_text-right.scss */
-.text-right {
+.landing .text-right {
   width: 100%;
   padding-top: 215px;
   text-align: center;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 9, ../scss/layouts/landing/_text-right.scss */
-.text-right .conteiner figure {
+/* line 7, ../scss/layouts/landing/_text-right.scss */
+.landing .text-right figure {
   width: 845px;
   height: 581px;
   margin-left: 58px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 15, ../scss/layouts/landing/_text-right.scss */
-.text-right .conteiner figure img {
+/* line 13, ../scss/layouts/landing/_text-right.scss */
+.landing .text-right figure img {
   float: left;
 }
-/* line 19, ../scss/layouts/landing/_text-right.scss */
-.text-right .conteiner figure figcaption {
+/* line 17, ../scss/layouts/landing/_text-right.scss */
+.landing .text-right figure figcaption {
   float: right;
   width: 445px;
   height: 230px;
@@ -680,16 +745,15 @@ footer .conteiner .copyright {
   font-size: 0;
   text-align: left;
 }
-/* line 31, ../scss/layouts/landing/_text-right.scss */
-.text-right .conteiner figure figcaption p {
+/* line 29, ../scss/layouts/landing/_text-right.scss */
+.landing .text-right figure figcaption p {
   margin-top: 17px;
   font: lighter 16px "Open Sans";
   line-height: 27px;
   color: #777777;
 }
-
 /* line 1, ../scss/layouts/landing/_trademark.scss */
-.trademark {
+.landing .trademark {
   width: 100%;
   padding-top: 205px;
   padding-bottom: 214px;
@@ -698,140 +762,126 @@ footer .conteiner .copyright {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 11, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner h6 {
+/* line 9, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark h6 {
   text-align: center;
 }
-/* line 15, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner h2 {
+/* line 13, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark h2 {
   text-align: center;
 }
-/* line 19, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner .figure {
+/* line 17, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark .figure {
   width: 860px;
   margin: 48px auto 0;
   font-size: 0;
 }
-/* line 24, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner .figure figure {
+/* line 22, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark .figure figure {
   display: inline-block;
   width: 240px;
   margin-left: 70px;
 }
-/* line 29, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner .figure figure:first-child {
+/* line 27, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark .figure figure:first-child {
   margin-left: 0;
 }
-/* line 33, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner .figure figure img {
+/* line 31, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark .figure figure img {
   padding: 12px 13px 13px 12px;
   border: 1px solid #e1e1e1;
 }
-/* line 38, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner .figure figure figcaption {
+/* line 36, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark .figure figure figcaption {
   margin-top: 28px;
 }
-/* line 43, ../scss/layouts/landing/_trademark.scss */
-.trademark .conteiner .arrow-min {
+/* line 41, ../scss/layouts/landing/_trademark.scss */
+.landing .trademark .arrow-min {
   margin: 23px auto 0;
 }
-
 /* line 1, ../scss/layouts/landing/_sign-up.scss */
-.sign-up {
+.landing .sign-up {
+  position: relative;
   width: 100%;
-  background-color: #2c3e50;
   padding: 108px 0;
-  border-bottom: 5px solid #16a085;
-  font-size: 0;
-  text-align: center;
-  overflow: hidden;
-  *zoom: 1;
+  background-color: #2c3e50;
 }
-/* line 10, ../scss/layouts/landing/_sign-up.scss */
-.sign-up .conteiner {
-  width: 995px;
-  margin: 0 auto;
+/* line 7, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up::before {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  left: -100%;
+  z-index: -1;
+  background-color: red;
+  content: '';
 }
-/* line 15, ../scss/layouts/landing/_sign-up.scss */
-.sign-up .conteiner h2 span {
+/* line 17, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up::after {
+  position: absolute;
+  top: 100%;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-image: url(../../../client/images/background&border/border.png);
+  content: '';
+}
+/* line 27, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up .block-wrapper {
+  z-index: 2;
+}
+/* line 29, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up .block-wrapper h2 {
   font: lighter 36px "Open Sans";
   line-height: 42px;
   text-transform: uppercase;
-  color: white;
+  text-align: center;
+  color: #ffffff;
 }
-/* line 23, ../scss/layouts/landing/_sign-up.scss */
-.sign-up .conteiner p {
-  margin-top: 15px;
+/* line 36, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up .block-wrapper p {
+  margin-top: 28px;
+  margin-bottom: 67px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
 }
-/* line 25, ../scss/layouts/landing/_sign-up.scss */
-.sign-up .conteiner p span {
-  font: lighter 18px "Open Sans";
-  line-height: 27px;
-  color: white;
-}
-/* line 31, ../scss/layouts/landing/_sign-up.scss */
-.sign-up .conteiner form {
-  margin: 63px auto 0;
+/* line 45, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up .block-wrapper form {
   width: 692px;
   height: 71px;
+  margin: auto;
   font-size: 0;
-  overflow: hidden;
-  *zoom: 1;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
 }
-/* line 39, ../scss/layouts/landing/_sign-up.scss */
-.sign-up .conteiner form input {
-  float: left;
-  width: 448px;
-  height: 31px;
-  padding: 20px;
-  border: 0;
-}
-/* line 2, ../scss/mixins/_placeholder.scss */
-.sign-up .conteiner form input::-webkit-input-placeholder {
-  font: lighter 18px "Open Sans";
-  color: #8a8a8a;
-}
-/* line 3, ../scss/mixins/_placeholder.scss */
-.sign-up .conteiner form input::-moz-placeholder {
-  font: lighter 18px "Open Sans";
-  color: #8a8a8a;
-}
-/* line 4, ../scss/mixins/_placeholder.scss */
-.sign-up .conteiner form input:-moz-placeholder {
-  font: lighter 18px "Open Sans";
-  color: #8a8a8a;
-}
-/* line 5, ../scss/mixins/_placeholder.scss */
-.sign-up .conteiner form input:-ms-input-placeholder {
-  font: lighter 18px "Open Sans";
-  color: #8a8a8a;
-}
-
 /* line 1, ../scss/layouts/landing/_social-block.scss */
-.social-block {
+.landing .social-block {
   width: 100%;
-  margin-top: 210px;
+  padding-top: 210px;
 }
-/* line 7, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner h6 {
+/* line 5, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block h6 {
   text-align: center;
 }
-/* line 11, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner h2 {
+/* line 9, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block h2 {
   text-align: center;
 }
-/* line 15, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote {
+/* line 13, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote {
   margin-top: 48px;
   font-size: 0;
 }
-/* line 19, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure {
+/* line 17, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure {
   display: inline-block;
   width: 419px;
   height: 334px;
@@ -839,12 +889,12 @@ footer .conteiner .copyright {
   margin-bottom: 60px;
   border: 1px solid #e1e1e1;
 }
-/* line 27, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure:nth-child(2n+1) {
+/* line 25, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure:nth-child(2n+1) {
   margin-left: 0;
 }
-/* line 31, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure img {
+/* line 29, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure img {
   display: block;
   margin: 48px auto 0;
   -webkit-border-radius: 50%;
@@ -853,28 +903,28 @@ footer .conteiner .copyright {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 37, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure figcaption {
+/* line 35, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure figcaption {
   margin: 22px auto 0;
   width: 348px;
 }
-/* line 41, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure figcaption h4 {
+/* line 39, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure figcaption h4 {
   font: normal 18px "Open Sans";
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   color: #5e5e5e;
 }
-/* line 48, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure figcaption h4 a {
+/* line 46, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure figcaption h4 a {
   font: normal 14px "Georgia";
   text-decoration: none;
   text-transform: none;
   color: #16a085;
 }
-/* line 54, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure figcaption h4 a:hover {
+/* line 52, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure figcaption h4 a:hover {
   color: #19cfab;
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -885,24 +935,45 @@ footer .conteiner .copyright {
   -o-transition-duration: 250ms;
   transition-duration: 250ms;
 }
-/* line 62, ../scss/layouts/landing/_social-block.scss */
-.social-block .conteiner .quote figure figcaption .italic {
+/* line 60, ../scss/layouts/landing/_social-block.scss */
+.landing .social-block .quote figure figcaption .italic {
   margin-top: 21px;
   line-height: 25px;
 }
-
 /* line 1, ../scss/layouts/landing/_last-block.scss */
-.last-block {
+.landing .last-block {
   width: 100%;
-  margin: 77px 0 113px;
+  padding-top: 77px;
+  padding-bottom: 113px;
 }
-/* line 7, ../scss/layouts/landing/_last-block.scss */
-.last-block .conteiner .italic {
+/* line 6, ../scss/layouts/landing/_last-block.scss */
+.landing .last-block .italic {
   width: 595px;
   margin: 0 auto;
 }
-/* line 12, ../scss/layouts/landing/_last-block.scss */
-.last-block .conteiner .button {
+/* line 11, ../scss/layouts/landing/_last-block.scss */
+.landing .last-block .button {
   display: block;
   margin: 61px auto 0;
+}
+/* line 10, ../scss/layouts/_landing.scss */
+.landing .push {
+  float: right;
+  vertical-align: top;
+  width: 0;
+  height: 100%;
+  min-height: 1px;
+  background-color: red;
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  -o-transition-duration: 400ms;
+  transition-duration: 400ms;
+}
+/* line 20, ../scss/layouts/_landing.scss */
+.landing .push.show {
+  width: 190px;
 }

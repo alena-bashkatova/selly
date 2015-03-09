@@ -9,6 +9,8 @@
   text-transform: uppercase;
   color: white;
   @include border-radius(3px);
+  @include transition-property (all);
+  @include transition-duration (400ms);
 
   &:hover {
     background-color: #19b596;
@@ -27,6 +29,9 @@ button {
   font: normal 16px 'Open Sans';
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
+  @include transition-property (all);
+  @include transition-duration (400ms);
 
   &:hover {
       background-color: #19b596;

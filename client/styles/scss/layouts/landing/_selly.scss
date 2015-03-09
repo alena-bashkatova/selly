@@ -1,8 +1,19 @@
 .selly {
+  position: relative;
+  width: 100%;
   padding: 120px 0 92px;
   border-bottom: 5px solid #16a085;
-  background: url(../../images/background/background.png);
+  background: url(../../images/background&border/background.png);
   background-size: cover;
+  &::after {
+    position: absolute;
+    top: 100%;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-image: url(../../../client/images/background&border/border.png);
+    content: '';
+  }
 
   .logo {
     display: block;
@@ -36,10 +47,12 @@
 
     .button {
       display: inline-block;
+      vertical-align: top;
     }
 
     .button-black {
       display: inline-block;
+      vertical-align: top;
       width: 218px;
       height: 66px;
       margin-left: 30px;

@@ -1,0 +1,25 @@
+input {
+  display: inline-block;
+  width: 488px;
+  height: 71px;
+  padding-left: 68px;
+  border:none;
+  background: url(../../../client/images/input/mail.png) no-repeat;
+  background-position: 25px center;
+  font: lighter 18px 'Open Sans', sans-serif;
+  vertical-align: bottom;
+  color: #777777;
+  outline: none;
+  @include box-sizing (border-box);
+  @include user-select (none);
+  &:focus {
+    background-color: #eac7d1;
+    font: lighter 18px Georgia;
+    color: #51272d;
+    @include transition-property (all);
+    @include transition-duration (1000ms);
+    @include placeholder {
+      color: transparent;
+    }
+  }
+}
