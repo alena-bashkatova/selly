@@ -4,22 +4,24 @@ input {
   height: 71px;
   padding-left: 68px;
   border:none;
-  background: url(../../../client/images/input/mail.png) no-repeat;
+  background-image: url(../../../client/images/input/mail.png);
   background-position: 25px center;
+  background-repeat: no-repeat;
   font: lighter 18px 'Open Sans', sans-serif;
   vertical-align: bottom;
-  color: #777777;
   outline: none;
-  @include box-sizing (border-box);
+  @include border-radius (5px 0 0 5px);
   @include user-select (none);
+  @include box-sizing(border-box);
+  @include placeholder {
+    color: #8a8a8a;
+  }
+
   &:focus {
-    background-color: #eac7d1;
-    font: lighter 18px Georgia;
-    color: #51272d;
+    background-color: #cfe9e4;
+    font-weight: normal;
+    color: #2c3e50;
     @include transition-property (all);
     @include transition-duration (1000ms);
-    @include placeholder {
-      color: transparent;
-    }
   }
 }

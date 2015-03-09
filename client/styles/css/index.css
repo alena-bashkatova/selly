@@ -87,15 +87,37 @@ body {
 /* line 4, ../scss/_base.scss */
 body.landing {
   overflow-x: hidden;
+  font-size: 0;
+  text-align: center;
 }
-/* line 7, ../scss/_base.scss */
+/* line 10, ../scss/_base.scss */
+body.landing .clearfix::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+/* line 17, ../scss/_base.scss */
+body.landing main .selly {
+  width: 100%;
+}
+/* line 26, ../scss/_base.scss */
+body.landing .content {
+  display: inline-block;
+  font-size: 0;
+}
+/* line 30, ../scss/_base.scss */
+body.landing .content .container {
+  width: 995px;
+  margin: 0 auto;
+}
+/* line 37, ../scss/_base.scss */
 body.landing h2 {
   font: lighter 36px "Open Sans";
   line-height: 42px;
   text-transform: uppercase;
   color: #363636;
 }
-/* line 14, ../scss/_base.scss */
+/* line 44, ../scss/_base.scss */
 body.landing h3 {
   font: lighter 24px "Open Sans";
   line-height: 45px;
@@ -103,44 +125,44 @@ body.landing h3 {
   text-transform: uppercase;
   color: #5e5e5e;
 }
-/* line 22, ../scss/_base.scss */
+/* line 52, ../scss/_base.scss */
 body.landing h6 {
   font: italic 14px "Georgia";
   line-height: 26px;
   color: #8a8a8a;
 }
-/* line 28, ../scss/_base.scss */
+/* line 58, ../scss/_base.scss */
 body.landing p {
   font: lighter 16px "Open Sans";
   line-height: 27px;
   color: #777777;
 }
-/* line 34, ../scss/_base.scss */
+/* line 64, ../scss/_base.scss */
 body.landing .italic {
   font: italic 14px "Georgia";
   line-height: 22px;
   text-align: center;
   color: #8a8a8a;
 }
-/* line 43, ../scss/_base.scss */
-body.landing main .selly {
-  width: 100%;
+/* line 71, ../scss/_base.scss */
+body .push {
+  float: right;
+  vertical-align: top;
+  width: 0;
+  height: 100%;
+  min-height: 1px;
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  -o-transition-duration: 400ms;
+  transition-duration: 400ms;
 }
-/* line 47, ../scss/_base.scss */
-body.landing main .content-wrapper {
-  text-align: center;
-}
-/* line 50, ../scss/_base.scss */
-body.landing main .content-wrapper .content {
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 55, ../scss/_base.scss */
-body.landing main .content-wrapper .content .container {
-  width: 995px;
-  margin: 0 auto;
+/* line 80, ../scss/_base.scss */
+body .push.show {
+  width: 190px;
 }
 
 /* line 1, ../scss/components/_button.scss */
@@ -177,7 +199,7 @@ body.landing main .content-wrapper .content .container {
 button {
   float: right;
   width: 204px;
-  height: 72px;
+  height: 71px;
   padding: 0;
   border: none;
   border-bottom: 3px solid #3bd4b6;
@@ -220,7 +242,7 @@ button:hover {
   border-radius: 50%;
 }
 /* line 14, ../scss/components/_arrow-min.scss */
-.arrow-min a::after {
+.arrow-min a::before {
   position: absolute;
   top: 12px;
   left: 7px;
@@ -241,7 +263,7 @@ button:hover {
   transform: rotate(45deg);
 }
 /* line 26, ../scss/components/_arrow-min.scss */
-.arrow-min a::before {
+.arrow-min a::after {
   position: absolute;
   top: 12px;
   left: 11px;
@@ -274,7 +296,7 @@ button:hover {
   transition-duration: 250ms;
 }
 /* line 42, ../scss/components/_arrow-min.scss */
-.arrow-min a:hover::after {
+.arrow-min a:hover::before {
   background-color: #19cfab;
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -286,7 +308,7 @@ button:hover {
   transition-duration: 250ms;
 }
 /* line 47, ../scss/components/_arrow-min.scss */
-.arrow-min a:hover::before {
+.arrow-min a:hover::after {
   background-color: #19cfab;
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -305,27 +327,47 @@ input {
   height: 71px;
   padding-left: 68px;
   border: none;
-  background: url(../../../client/images/input/mail.png) no-repeat;
+  background-image: url(../../../client/images/input/mail.png);
   background-position: 25px center;
+  background-repeat: no-repeat;
   font: lighter 18px 'Open Sans', sans-serif;
   vertical-align: bottom;
-  color: #777777;
   outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: default;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 15, ../scss/components/_input.scss */
+/* line 2, ../scss/mixins/_placeholder.scss */
+input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+/* line 3, ../scss/mixins/_placeholder.scss */
+input::-moz-placeholder {
+  color: #8a8a8a;
+}
+/* line 4, ../scss/mixins/_placeholder.scss */
+input:-moz-placeholder {
+  color: #8a8a8a;
+}
+/* line 5, ../scss/mixins/_placeholder.scss */
+input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+/* line 20, ../scss/components/_input.scss */
 input:focus {
-  background-color: #eac7d1;
-  font: lighter 18px Georgia;
-  color: #51272d;
+  background-color: #cfe9e4;
+  font-weight: normal;
+  color: #2c3e50;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -334,22 +376,6 @@ input:focus {
   -moz-transition-duration: 1000ms;
   -o-transition-duration: 1000ms;
   transition-duration: 1000ms;
-}
-/* line 2, ../scss/mixins/_placeholder.scss */
-input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-/* line 3, ../scss/mixins/_placeholder.scss */
-input:focus::-moz-placeholder {
-  color: transparent;
-}
-/* line 4, ../scss/mixins/_placeholder.scss */
-input:focus:-moz-placeholder {
-  color: transparent;
-}
-/* line 5, ../scss/mixins/_placeholder.scss */
-input:focus:-ms-input-placeholder {
-  color: transparent;
 }
 
 /* line 1, ../scss/widgets/_aside.scss */
@@ -451,35 +477,40 @@ aside nav .mail a:hover {
 
 /* line 1, ../scss/widgets/_footer.scss */
 footer {
-  display: inline-block;
-  width: 100%;
-  border-top: 1px solid #e1e1e1;
+  position: relative;
 }
-/* line 6, ../scss/widgets/_footer.scss */
-footer .container {
-  width: 902px;
-  margin-left: 50px;
+/* line 4, ../scss/widgets/_footer.scss */
+footer::before {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  left: -100%;
+  z-index: -1;
+  height: 1px;
+  background-color: #e1e1e1;
+  content: '';
 }
-/* line 10, ../scss/widgets/_footer.scss */
-footer .container ul {
-  display: inline-block;
+/* line 17, ../scss/widgets/_footer.scss */
+footer nav ul {
+  float: left;
   width: 525px;
+  margin-left: 46px;
   font-size: 0;
 }
-/* line 15, ../scss/widgets/_footer.scss */
-footer .container ul li {
+/* line 23, ../scss/widgets/_footer.scss */
+footer nav ul li {
   display: inline-block;
   margin-right: 25px;
 }
-/* line 19, ../scss/widgets/_footer.scss */
-footer .container ul li a {
+/* line 27, ../scss/widgets/_footer.scss */
+footer nav ul li a {
   font: lighter 14px "Open Sans";
   line-height: 100px;
   text-decoration: none;
   color: #8a8a8a;
 }
-/* line 25, ../scss/widgets/_footer.scss */
-footer .container ul li a:hover {
+/* line 33, ../scss/widgets/_footer.scss */
+footer nav ul li a:hover {
   color: black;
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -490,10 +521,10 @@ footer .container ul li a:hover {
   -o-transition-duration: 250ms;
   transition-duration: 250ms;
 }
-/* line 34, ../scss/widgets/_footer.scss */
-footer .container .copyright {
-  display: inline-block;
-  margin-left: 250px;
+/* line 42, ../scss/widgets/_footer.scss */
+footer nav .copyright {
+  float: right;
+  margin-right: 46px;
   font: lighter 14px "Open Sans";
   line-height: 100px;
   color: #8a8a8a;
@@ -528,7 +559,7 @@ footer .container .copyright {
 .landing .selly h1 {
   margin-top: 40px;
   font: lighter 48px 'Open Sans';
-  line-height: 57px;
+  line-height: 60px;
   text-align: center;
   color: white;
 }
@@ -599,7 +630,7 @@ footer .container .copyright {
   border-radius: 50%;
 }
 /* line 88, ../scss/layouts/landing/_selly.scss */
-.landing .selly .arrow a::after {
+.landing .selly .arrow a::before {
   position: absolute;
   top: 20px;
   left: 12px;
@@ -620,7 +651,7 @@ footer .container .copyright {
   transform: rotate(45deg);
 }
 /* line 100, ../scss/layouts/landing/_selly.scss */
-.landing .selly .arrow a::before {
+.landing .selly .arrow a::after {
   position: absolute;
   top: 20px;
   left: 18px;
@@ -645,11 +676,11 @@ footer .container .copyright {
   border: 2px solid #16a085;
 }
 /* line 114, ../scss/layouts/landing/_selly.scss */
-.landing .selly .arrow a:hover::after {
+.landing .selly .arrow a:hover::before {
   background-color: #16a085;
 }
 /* line 117, ../scss/layouts/landing/_selly.scss */
-.landing .selly .arrow a:hover::before {
+.landing .selly .arrow a:hover::after {
   background-color: #16a085;
 }
 /* line 1, ../scss/layouts/landing/_text-left.scss */
@@ -803,7 +834,7 @@ footer .container .copyright {
 .landing .sign-up {
   position: relative;
   width: 100%;
-  padding: 108px 0;
+  padding-top: 108px;
   background-color: #2c3e50;
 }
 /* line 7, ../scss/layouts/landing/_sign-up.scss */
@@ -814,24 +845,14 @@ footer .container .copyright {
   bottom: 0;
   left: -100%;
   z-index: -1;
-  background-color: red;
+  background-color: #2c3e50;
   content: '';
 }
-/* line 17, ../scss/layouts/landing/_sign-up.scss */
-.landing .sign-up::after {
-  position: absolute;
-  top: 100%;
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-image: url(../../../client/images/background&border/border.png);
-  content: '';
-}
-/* line 27, ../scss/layouts/landing/_sign-up.scss */
+/* line 18, ../scss/layouts/landing/_sign-up.scss */
 .landing .sign-up .block-wrapper {
   z-index: 2;
 }
-/* line 29, ../scss/layouts/landing/_sign-up.scss */
+/* line 20, ../scss/layouts/landing/_sign-up.scss */
 .landing .sign-up .block-wrapper h2 {
   font: lighter 36px "Open Sans";
   line-height: 42px;
@@ -839,7 +860,7 @@ footer .container .copyright {
   text-align: center;
   color: #ffffff;
 }
-/* line 36, ../scss/layouts/landing/_sign-up.scss */
+/* line 27, ../scss/layouts/landing/_sign-up.scss */
 .landing .sign-up .block-wrapper p {
   margin-top: 28px;
   margin-bottom: 67px;
@@ -849,7 +870,7 @@ footer .container .copyright {
   text-align: center;
   color: #ffffff;
 }
-/* line 45, ../scss/layouts/landing/_sign-up.scss */
+/* line 36, ../scss/layouts/landing/_sign-up.scss */
 .landing .sign-up .block-wrapper form {
   width: 692px;
   height: 71px;
@@ -858,9 +879,37 @@ footer .container .copyright {
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: default;
+}
+/* line 42, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up .block-wrapper form button {
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+/* line 46, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up .block-wrapper .border {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 108px;
+  background: url(../../../client/images/background&border/border.png);
+}
+/* line 53, ../scss/layouts/landing/_sign-up.scss */
+.landing .sign-up .block-wrapper .border::before {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  left: -100%;
+  z-index: -1;
+  background-image: url(../../../client/images/background&border/border.png);
+  background-position: 10%;
+  background-repeat: repeat-x;
+  content: '';
 }
 /* line 1, ../scss/layouts/landing/_social-block.scss */
 .landing .social-block {
@@ -955,25 +1004,4 @@ footer .container .copyright {
 .landing .last-block .button {
   display: block;
   margin: 61px auto 0;
-}
-/* line 10, ../scss/layouts/_landing.scss */
-.landing .push {
-  float: right;
-  vertical-align: top;
-  width: 0;
-  height: 100%;
-  min-height: 1px;
-  background-color: red;
-  -webkit-transition-property: width;
-  -moz-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
-  -webkit-transition-duration: 400ms;
-  -moz-transition-duration: 400ms;
-  -o-transition-duration: 400ms;
-  transition-duration: 400ms;
-}
-/* line 20, ../scss/layouts/_landing.scss */
-.landing .push.show {
-  width: 190px;
 }

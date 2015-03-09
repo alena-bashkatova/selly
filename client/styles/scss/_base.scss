@@ -3,61 +3,82 @@ body {
   // refactor this code, it's just example
   &.landing {
     overflow-x: hidden;
+    font-size: 0;
+    text-align: center;
 
-      h2 {
-        font: lighter 36px "Open Sans";
-        line-height: 42px;
-        text-transform: uppercase;
-        color: #363636;
+    .clearfix {
+      &::after {
+        display: table;
+        clear: both;
+        content: '';
       }
-
-      h3 {
-        font: lighter 24px "Open Sans";
-        line-height: 45px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #5e5e5e;
-      }
-
-      h6 {
-        font: italic 14px "Georgia";
-        line-height: 26px;
-        color: #8a8a8a;
-      }
-
-      p {
-        font: lighter 16px "Open Sans";
-        line-height: 27px;
-        color: #777777;
-      }
-
-      .italic {
-        font: italic 14px "Georgia";
-        line-height: 22px;
-        text-align: center;
-        color: #8a8a8a;
-      }
-
+    }
     main {
+       .selly {
+         width: 100%;
+       }
 
-      .selly {
-        width: 100%;
+       .content-wrapper {
+         //text-align: center;
+       }
+     }
+
+    .content {
+      display: inline-block;
+      font-size: 0;
+
+      .container {
+        width: 995px;
+        margin: 0 auto;
       }
+    }
 
-      .content-wrapper {
-        text-align: center;
 
-        .content {
-          display: inline-block;
-          font-size: 0;
-          @include clearfix;
+    h2 {
+      font: lighter 36px "Open Sans";
+      line-height: 42px;
+      text-transform: uppercase;
+      color: #363636;
+    }
 
-          .container {
-            width: 995px;
-            margin: 0 auto;
-          }
-        }
-      }
+    h3 {
+      font: lighter 24px "Open Sans";
+      line-height: 45px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #5e5e5e;
+    }
+
+    h6 {
+      font: italic 14px "Georgia";
+      line-height: 26px;
+      color: #8a8a8a;
+    }
+
+    p {
+      font: lighter 16px "Open Sans";
+      line-height: 27px;
+      color: #777777;
+    }
+
+    .italic {
+      font: italic 14px "Georgia";
+      line-height: 22px;
+      text-align: center;
+      color: #8a8a8a;
+    }
+  }
+  .push {
+    float: right;
+    vertical-align: top;
+    width: 0;
+    height: 100%;
+    min-height: 1px;
+    @include transition-property(width);
+    @include transition-duration(400ms);
+
+    &.show {
+      width: 190px;
     }
   }
 }

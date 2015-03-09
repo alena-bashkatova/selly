@@ -24,7 +24,7 @@
   h1 {
     margin-top: 40px;
     font: lighter 48px 'Open Sans';
-    line-height: 57px;
+    line-height: 60px;
     text-align: center;
     color: white;
 
@@ -85,7 +85,7 @@
       text-align: center;
       @include border-radius(50%);
 
-      &::after {
+      &::before {
         position: absolute;
         top: 20px;
         left: 12px;
@@ -97,7 +97,7 @@
         @include border-radius(2px);
         @include rotate (45deg);
       }
-      &::before {
+      &::after {
         position: absolute;
         top: 20px;
         left: 18px;
@@ -111,10 +111,10 @@
       }
       &:hover {
         border: 2px solid #16a085;
-        &::after {
+        &::before {
           background-color: #16a085;
         }
-        &::before {
+        &::after {
           background-color: #16a085;
         }
       }
